@@ -2,8 +2,6 @@
 Registration using Flask, sqlite3
 
 
-Follow the steps below to download, install, and run this project.
-
 ## Dependencies
 `$ pip install flask `
 
