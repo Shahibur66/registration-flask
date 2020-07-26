@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block style %}
+
+<style>
+
+.body{
+	background-color: #32a881;
+}
+
+
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+</style>
+
+{% endblock %}
+
+{% block body %}	
+
+	  
+<div class="content">
+
+	  	<ul>
+			<h1>Registrants</h1>
+			{% for row in rows.fetchall() %}
+
+			 <!-- wrong approach 
+
+			 	<li>{{row["name"]}} ({{row["email"]}})</li> 
+
+			 -->
+			<h4> <li>{{ row[1] }} ({{row[2]}})</li> </h4> 
+			{% endfor %}
+		</ul>
+		
+		<button style="padding: 10px; margin: 25px;"><a href="/register">Register</a></button><button style="padding: 10px; margin: 40px;"> <a href="/delete">Delete All</a></button>
+	  </div>
+	
+	
+{% endblock %}
